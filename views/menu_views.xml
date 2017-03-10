@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <menuitem name="CLINICA" id="clinica_menu_principal_gestion" sequence="10"/>
+        <menuitem name="Inicio" id="clinica_menu_inicio_gestion"  parent="clinica_menu_principal_gestion" sequence="10"/>
+        <menuitem name="Configuracion" id="clinica_menu_configuracion" parent="clinica_menu_principal_gestion"  sequence="20"/>
+        <menuitem name="Doctor" id="clinica_menu_doctor_configuracion" parent="clinica_menu_configuracion" sequence="20"/>
+ 	<menuitem name="Especialidad" id="clinica_menu_especialidad_configuracion" parent="clinica_menu_configuracion" sequence="20"/>  
+    </data>
+</openerp>

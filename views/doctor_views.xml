@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_clinica_doctor_form">
+            <field name="name">clinica_doctor_form</field>
+            <field name="model">clinicas.doctor</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="doctor">
+                    <sheet>
+                    <group>
+                        <field name="cedula"/>
+                        <field name="nombre"/>
+                        <field name="genero"/>
+                        <field name="especialidad_ids"/>
+                    </group>
+                    </sheet>
+                </form>
+            
+            </field>
+        
+        </record>
+        
+        <record model="ir.ui.view" id="view_clinica_doctor_tree">
+            <field name="name">clinica_doctor_tree</field>
+            <field name="model">clinicas.doctor</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="doctor">
+                   
+                        <field name="cedula"/>
+                        <field name="nombre"/>
+                        <field name="genero"/>
+                        <field name="especialidad_ids"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_clinica_doctor">
+            <field name="name">Clinica Doctor</field>
+            <field name="res_model">clinicas.doctor</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+        <menuitem name="Doctor" id="clinica_submenu_doctor_configuracion" parent="clinica_menu_doctor_configuracion" action="action_clinica_doctor" sequence="10"/>
+        
+    </data>
+</openerp>

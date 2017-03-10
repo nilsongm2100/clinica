@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_clinica_especialidad_form">
+            <field name="name">clinica_especialidad_form</field>
+            <field name="model">clinicas.especialidad</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="nucleo">
+                    <group>
+                        <field name="nombre"/>  
+                    </group>
+                </form>
+            
+            </field>
+        
+        </record>
+        
+        <record model="ir.ui.view" id="view_clinica_especialidad_tree">
+            <field name="name">clinica_especialidad_tree</field>
+            <field name="model">clinicas.especialidad</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="nucleo">
+                        <field name="nombre"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_clinica_especialidad">
+            <field name="name">clinica especialidad</field>
+            <field name="res_model">clinicas.especialidad</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+
+       <menuitem name="Especialidad" id="clinica_submenu_especialidad_configuracion" parent="clinica_menu_especialidad_configuracion" action="action_clinica_especialidad" sequence="10"/>
+        
+       
+    </data>
+</openerp>
